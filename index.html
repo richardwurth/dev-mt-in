@@ -1,14 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="central" lang="en">
 
 <head>
+	<link rel="stylesheet" href="style.css">
 	<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>DevMtin</title>
 </head>
 
-<body>
+<body ng-controller="mainController as mainCtrl">
+	<div class="top-parent">
+		<img src="images/icons/Search.svg" alt="" class="top-magnifying">
+		<input class="topSearch" id="topSearch" type="text" name="" value="" style="text-align:center" placeholder="DevMountain">
+		<img src="images/Icons/Ham.svg" alt="" id="hamburger-menu">
+		<div id="topLine"></div>
+	</div>
+	<div class="main-content">
+		<div class="left-side">
+		<div id="welcome">
+			<p>Welcome to <a style="text-decoration: none; color: #00FFE9" href="#">DevMountain</a> Social</p>
+			<p>Add Some Info So Friends Can Find You</p>
+		</div>
+		<form action="" id="initial">
+			<input type="text" id="fullname" name="full-name" placeholder="Full Name">
+			<input type="text" id="tagline" name="Tagline" placeholder="Tagline">
+			<input type="text" id="avatar-img" name="pimage" placeholder="Profile Image Url">
+			<textarea type="text" id="bio" name="bio-input" placeholder="Bio"></textarea>
+		</form>
+		<button id="saveInitial">Save Changes</button>
+		</div>
+		<div id="large-icon"></div>
+	</div>
+	<div class="footer-border"></div>
+	<div class="footer-navigation">
+		<a href="" class="foot-link">View Friends</a>
+		<a href="" class="foot-link">Find Friends</a>
+		<a href="" class="foot-link">Update Profile</a>
+	</div>
 
-  
+<!-- Below are the scripts for JS -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="app/app.js"></script>
+<script type="text/javascript" src="app/mainService.js"></script>
+<script type="text/javascript" src="app/mainCtrl.js"></script>
+<!-- Above are the scripts for JS -->
 </body>
 </html>
