@@ -60,8 +60,8 @@ body {
   align-items: center;
 }
 #large-icon{
-  width: 0;
-  height: 0px;
+  width: auto;
+  height: auto;
   border-top: 200px solid transparent;
   border-right: 400px solid #00FFE9;
   border-bottom: 200px solid transparent;
@@ -126,7 +126,6 @@ input {
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 3%;
-
   font-weight: bold;
 }
 .footer-border {
@@ -170,3 +169,34 @@ input {
   left: 0.1em;
   transform-origin: 1% 0;
 }
+.friends-main {
+  margin: auto;
+  width: 80vw;
+  height: 80vh;
+  /*background-color: white;*/
+  display: none;
+}
+.update-main {
+  display: none;
+}
+/* Below is the View Friends page*/
+.friends-left {
+  width: 40%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.friends-right {
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+  height: 40%;
+  width: 40%;
+  flex-wrap: wrap;
+  background-color: red;
+}
+/* Above is the View Friends page*/

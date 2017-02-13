@@ -4,55 +4,87 @@
 <head>
 	<link rel="stylesheet" href="style.css">
 	<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>DevMtin</title>
 </head>
 
-<body ng-controller="mainController as mainCtrl">
+<body ng-controller="mainController">
 	<div class="top-parent">
+		<button ng-click="softReset()" class="abort">Reset</button>
 		<img src="images/icons/Search.svg" alt="" class="top-magnifying">
 		<input class="topSearch" id="topSearch" type="text" name="" value="" style="text-align:center" placeholder="DevMountain">
 		<img src="images/Icons/Ham.svg" alt="" id="hamburger-menu">
 		<div id="topLine"></div>
 	</div>
+	<!-- Below is the Initial Screen -->
 	<div class="main-content">
 		<div class="left-side">
-		<div id="welcome">
-			<p>Welcome to <a style="text-decoration: none; color: #00FFE9" href="#">DevMountain</a> Social</p>
-			<p>Add Some Info So Friends Can Find You</p>
-		</div>
-		<form action="" id="initial">
-			<input type="text" id="fullname" name="full-name" placeholder="Full Name">
-			<input type="text" id="tagline" name="Tagline" placeholder="Tagline">
-			<input type="text" id="avatar-img" name="pimage" placeholder="Profile Image Url">
-			<textarea type="text" id="bio" name="bio-input" placeholder="Bio"></textarea>
-		</form>
-		<button id="saveInitial">Save Changes</button>
+			<div id="welcome">
+				<p>Welcome to <a style="text-decoration: none; color: #00FFE9" href="#">DevMountain</a> Social</p>
+				<p>Add Some Info So Friends Can Find You</p>
+			</div>
+			<form action="" id="initial">
+				<input type="text" id="fullname" name="full-name" placeholder="Full Name">
+				<input type="text" id="tagline" name="Tagline" placeholder="Tagline">
+				<input type="text" id="avatar-img" name="pimage" placeholder="Profile Image Url">
+				<textarea type="text" id="bio" name="bio-input" placeholder="Bio"></textarea>
+			</form>
+			<button id="saveInitial">Save Changes</button>
 		</div>
 		<div id="large-icon"></div>
 		<div class="theParent">
-<div class='pageOption'>
-  <a href='#' class='option' data-inf='photo'>
-    <img src='https://images3.alphacoders.com/208/208377.jpg'>
-  </a>
-</div>
-</div>
+			<div class='pageOption'>
+				<a href='#' class='option' data-inf='photo'>
+					<img src='https://images3.alphacoders.com/208/208377.jpg'>
+				</a>
+			</div>
+		</div>
 	</div>
+	<!-- Above is the Initial Screen -->
+
+	<!-- Below is the Friends Screen -->
+	<div class="friends-main">
+   <div class="friends-left">
+   	<h1 id="friendMyProfileName">Richard Wurth</h1>
+		<p class="" id="friendMyTagline">This is my tagline!</p>
+		<p id="friendMyDescription">poajsdpoajpsdj apsodj apsojdpasoj apsodj aojs osos asojdaposj sodjpaojsdpoj aosos sds so so app dowow spoja paposj wowo sojapsdoj aposjdo aposd aposjd os os os so sojapsojdpoasjdp a o osjdpa</p>
+   </div>
+	 <div class="friends-right">
+    <div id="friends-main-search"></div>
+		<div class="myFriendsIcons">
+			<div class="friendBox"></div>
+			<div class="friendBox"></div>
+			<div class="friendBox"></div>
+			<div class="friendBox"></div>
+			<div class="friendBox"></div>
+			<div class="friendBox"></div>
+		</div>
+	 </div>
+	</div>
+	<!-- Above is the Friends Screen -->
+
+	<!-- Below is the Update Profile Screen -->
+	<div class="update-main">
+		<h1>This is a test to see if the Update Profile page is functioning properly</h1>
+	</div>
+	<!-- Above is the Update Profile Screen -->
+
+
 	<div class="footer-border"></div>
 	<div class="footer-navigation">
-		<a href="" class="foot-link">View Friends</a>
-		<a href="" class="foot-link">Find Friends</a>
-		<a href="" class="foot-link">Update Profile</a>
+		<a ng-click="custFadeOut(); friendsFadeIn()" href="" class="foot-link">View Friends</a>
+		<a ng-click="custFadeOut()" href="" class="foot-link">Find Friends</a>
+		<a ng-click="custFadeOut(); updateFadeIn()" href="" class="foot-link">Update Profile</a>
 	</div>
 
-<!-- Below are the scripts for JS -->
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-<script type="text/javascript" src="app/app.js"></script>
-<script type="text/javascript" src="app/mainService.js"></script>
-<script type="text/javascript" src="app/mainCtrl.js"></script>
-<!-- Above are the scripts for JS -->
+	<!-- Below are the scripts for JS -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="app/app.js"></script>
+	<script type="text/javascript" src="app/mainService.js"></script>
+	<script type="text/javascript" src="app/mainCtrl.js"></script>
+	<!-- Above are the scripts for JS -->
 </body>
 </html>
