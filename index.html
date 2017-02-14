@@ -10,7 +10,7 @@
 
 <body ng-controller="mainController">
 	<div class="top-parent">
-		<button ng-click="softReset()" class="abort">Reset</button>
+		<button ng-click="softReset(); underline()" class="abort">Reset</button>
 		<img src="images/icons/Search.svg" alt="" class="top-magnifying">
 		<input class="topSearch" id="topSearch" type="text" name="" value="" style="text-align:center" placeholder="DevMountain">
 		<img src="images/Icons/Ham.svg" alt="" id="hamburger-menu">
@@ -43,48 +43,68 @@
 	<!-- Above is the Initial Screen -->
 
 	<!-- Below is the Friends Screen -->
-	<div class="friends-main">
-   <div class="friends-left">
-   	<h1 id="friendMyProfileName">Richard Wurth</h1>
-		<p class="" id="friendMyTagline">This is my tagline!</p>
-		<p id="friendMyDescription">poajsdpoajpsdj apsodj apsojdpasoj apsodj aojs osos asojdaposj sodjpaojsdpoj aosos sds so so app dowow spoja paposj wowo sojapsdoj aposjdo aposd aposjd os os os so sojapsojdpoasjdp a o osjdpa</p>
-   </div>
-	 <div class="friends-right">
-    <div id="friends-main-search"></div>
-		<div class="myFriendsIcons">
-			<div class="friendBox"></div>
-			<div class="friendBox"></div>
-			<div class="friendBox"></div>
-			<div class="friendBox"></div>
-			<div class="friendBox"></div>
-			<div class="friendBox"></div>
+	<div id="friendsParent">
+		<div class="friends-main">
+			<div class="friends-left">
+				<div id="friendMyProfileName">
+					<h1>Richard Wurth</h1>
+				</div>
+				<div id="friendMyDescription">
+					<p id="friendMyTagline">This is my tagline!</p>
+					<p>poajsdpoajpsdj apsodj apsojdpasoj apsodj aojs osos asojdaposj sodjpaojsdpoj aosos sds so so app dowow spoja paposj wowo sojapsdoj aposjdo aposd aposjd os os os so sojapsojdpoasjdp a o osjdpa</p>
+					<p>
+						Ex vel etiam labitur. In etiam quaeque sea, iudico disputando pri in. Utamur labores salutatus duo cu. Duo ex esse erant dignissim.
+
+						Verear labores cotidieque vim id. Pro vide perpetua ocurreret ei, ex theophrastus suscipiantur vim, vocibus habemus accusam mea id. Oportere pericula theophrastus vix ne. Euismod disputationi eum ea, in sit sale apeirian.
+
+						Ubique delicatissimi no quo, quem nulla liber eum ut. Adhuc utamur legendos vis ut, qui atqui nonumes dissentias ei. Ut adhuc paulo voluptatum his. Sea ut illud saepe legendos, no autem postea graeci mei. Nam primis nostrud consulatu ut, at velit mollis scripta ius. Facer homero tibique pri in, ea ludus nihil fuisset vim, erat solet vitae sed no.
+
+						Mea ea diam dictas malorum. Ea eum tale eros audire, choro splendide in vix, saepe gubergren eos te. Mea soleat sadipscing interpretaris ut, pri eligendi moderatius cu, ex feugiat appetere eum. Vivendum scribentur no cum, ius ea etiam volumus, usu ex reque omittam volutpat. Ne harum congue qui, possim partiendo quo ut. Sea eu volumus repudiare gubergren, modo suscipiantur ex vix.</p>
+					</div>
+				</div>
+				<div class="friends-right">
+					<div id="friends-main-search"></div>
+					<div class="myFriendsIcons">
+						<div class="friendBox"></div>
+						<div class="friendBox"></div>
+						<div class="friendBox"></div>
+						<div class="friendBox"></div>
+						<div class="friendBox"></div>
+						<div class="friendBox"></div>
+					</div>
+				</div>
+			</div>
 		</div>
-	 </div>
-	</div>
-	<!-- Above is the Friends Screen -->
+		<!-- Above is the Friends Screen -->
 
-	<!-- Below is the Update Profile Screen -->
-	<div class="update-main">
-		<h1>This is a test to see if the Update Profile page is functioning properly</h1>
-	</div>
-	<!-- Above is the Update Profile Screen -->
+		<!-- Below is the Find Friends Screen -->
+<div id="findFriendsParent">
+	<h1>This is a test to see if the Find Friends section is functioning properly.</h1>
+</div>
+		<!-- Above is the Find Friends Screen -->
+
+		<!-- Below is the Update Profile Screen -->
+		<div class="update-main">
+			<h1>This is a test to see if the Update Profile page is functioning properly</h1>
+		</div>
+		<!-- Above is the Update Profile Screen -->
 
 
-	<div class="footer-border"></div>
-	<div class="footer-navigation">
-		<a ng-click="custFadeOut(); friendsFadeIn()" href="" class="foot-link">View Friends</a>
-		<a ng-click="custFadeOut()" href="" class="foot-link">Find Friends</a>
-		<a ng-click="custFadeOut(); updateFadeIn()" href="" class="foot-link">Update Profile</a>
-	</div>
+		<div class="footer-border"></div>
+		<div class="footer-navigation">
+			<a ng-click="custFadeOut(); friendsFadeIn(); underline()" href="" class="foot-link" id="friendsLink">View Friends</a>
+			<a ng-click="custFadeOut(); findFriendsFadeIn(); underline()" href="" class="foot-link" id="findLink">Find Friends</a>
+			<a ng-click="custFadeOut(); updateFadeIn(); underline()" href="" class="foot-link" id="updateLink">Update Profile</a>
+		</div>
 
-	<!-- Below are the scripts for JS -->
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="app/app.js"></script>
-	<script type="text/javascript" src="app/mainService.js"></script>
-	<script type="text/javascript" src="app/mainCtrl.js"></script>
-	<!-- Above are the scripts for JS -->
-</body>
-</html>
+		<!-- Below are the scripts for JS -->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="app/app.js"></script>
+		<script type="text/javascript" src="app/mainService.js"></script>
+		<script type="text/javascript" src="app/mainCtrl.js"></script>
+		<!-- Above are the scripts for JS -->
+	</body>
+	</html>

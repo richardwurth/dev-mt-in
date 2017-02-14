@@ -2,46 +2,83 @@ angular.module('central').controller('mainController', function($scope, mainServ
   let friendsVis = false;
   let updateVis = false;
   let vis = true;
+  let findVis = false;
 
   $scope.softReset = function () {
     friendsVis = false;
     updateVis = false;
+    findVis = false;
     vis = true;
     setTimeout(function(){
-    $('.main-content').fadeIn();
-  },1000);
+      $('.main-content').fadeIn();
+    },1000);
     $('.update-main').fadeOut(1000);
-    $('.friends-main').fadeOut(1000);
-
+    $('#friendsParent').fadeOut(1000);
+    $('#findFriendsParent').fadeOut(1000);
   }
   $scope.custFadeOut = function (){
     if (vis === true) {
-      $('.main-content').fadeOut();
+      $('.main-content').fadeOut(1000);
       vis = false;
-    // } else {
-    //   $('.main-content').fadeIn();
-    //   vis = true;
+      // } else {
+      //   $('.main-content').fadeIn();
+      //   vis = true;
     }
   }
   $scope.friendsFadeIn = function (){
     if (friendsVis === false) {
       friendsVis = true;
-      setTimeout(function(){
-      $('.friends-main').fadeIn(1000);
+      findVis = false;
       updateVis = false;
-    },1000);
+      setTimeout(function(){
+        $('#friendsParent').fadeIn(1000);
+      },1000);
       $('.update-main').fadeOut(1000);
+      $('#findFriendsParent').fadeOut(1000);
     }
   }
 
-$scope.updateFadeIn = function (){
-  if (updateVis === false) {
-    setTimeout(function(){
-    $('.update-main').fadeIn(1000);
-    updateVis = true;
-  },1000);
-    friendsVis = false;
-    $('.friends-main').fadeOut(1000);
+  $scope.updateFadeIn = function (){
+    if (updateVis === false) {
+      updateVis = true;
+      findVis = false;
+      friendsVis = false;
+      setTimeout(function(){
+        $('.update-main').fadeIn(1000);
+      },1000);
+      $('#friendsParent').fadeOut(1000);
+      $('#findFriendsParent').fadeOut(1000);
+    }
   }
-}
+  $scope.findFriendsFadeIn = function (){
+    if (findVis === false) {
+      findVis = true;
+      friendsVis = false;
+      updateVis = false;
+      setTimeout(function(){
+        $('#findFriendsParent').fadeIn(1000);
+      },1000);
+      $('#friendsParent').fadeOut(1000);
+      $('.update-main').fadeOut(1000);
+    }
+  }
+  $scope.underline = function () {
+    if (updateVis === true) {
+      $('#updateLink').addClass('section-underline');
+      $('#findLink').removeClass('section-underline');
+      $('#friendsLink').removeClass('section-underline');
+    }  else if (friendsVis === true) {
+      $('#friendsLink').addClass('section-underline');
+      $('#findLink').removeClass('section-underline');
+      $('#updateLink').removeClass('section-underline');
+    } else if (findVis === true) {
+      $('#findLink').addClass('section-underline');
+      $('#friendsLink').removeClass('section-underline');
+      $('#updateLink').removeClass('section-underline');
+    } else if (findVis === false && updateVis === false && friendsVis === false) {
+      $('#findLink').removeClass('section-underline');
+      $('#friendsLink').removeClass('section-underline');
+      $('#updateLink').removeClass('section-underline');
+    }
+  }
 });
