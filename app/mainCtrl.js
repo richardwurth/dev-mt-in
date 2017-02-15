@@ -11,14 +11,14 @@ angular.module('central').controller('mainController', function($scope, mainServ
     vis = true;
     setTimeout(function(){
       $('.main-content').fadeIn();
-    },1000);
-    $('.update-main').fadeOut(1000);
-    $('#friendsParent').fadeOut(1000);
-    $('#findFriendsParent').fadeOut(1000);
+    },500);
+    $('.update-main').fadeOut(500);
+    $('#friendsParent').fadeOut(500);
+    $('#findFriendsParent').fadeOut(500);
   }
   $scope.custFadeOut = function (){
     if (vis === true) {
-      $('.main-content').fadeOut(1000);
+      $('.main-content').fadeOut(500);
       vis = false;
       // } else {
       //   $('.main-content').fadeIn();
@@ -31,10 +31,10 @@ angular.module('central').controller('mainController', function($scope, mainServ
       findVis = false;
       updateVis = false;
       setTimeout(function(){
-        $('#friendsParent').fadeIn(1000);
-      },1000);
-      $('.update-main').fadeOut(1000);
-      $('#findFriendsParent').fadeOut(1000);
+        $('#friendsParent').fadeIn(500);
+      },500);
+      $('.update-main').fadeOut(500);
+      $('#findFriendsParent').fadeOut(500);
     }
   }
 
@@ -44,10 +44,10 @@ angular.module('central').controller('mainController', function($scope, mainServ
       findVis = false;
       friendsVis = false;
       setTimeout(function(){
-        $('.update-main').fadeIn(1000);
-      },1000);
-      $('#friendsParent').fadeOut(1000);
-      $('#findFriendsParent').fadeOut(1000);
+        $('.update-main').fadeIn(500);
+      },500);
+      $('#friendsParent').fadeOut(500);
+      $('#findFriendsParent').fadeOut(500);
     }
   }
   $scope.findFriendsFadeIn = function (){
@@ -56,10 +56,10 @@ angular.module('central').controller('mainController', function($scope, mainServ
       friendsVis = false;
       updateVis = false;
       setTimeout(function(){
-        $('#findFriendsParent').fadeIn(1000);
-      },1000);
-      $('#friendsParent').fadeOut(1000);
-      $('.update-main').fadeOut(1000);
+        $('#findFriendsParent').fadeIn(500);
+      },500);
+      $('#friendsParent').fadeOut(500);
+      $('.update-main').fadeOut(500);
     }
   }
   $scope.underline = function () {
