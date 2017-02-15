@@ -127,6 +127,8 @@ input {
   margin-right: 10%;
   margin-top: 3%;
   font-weight: bold;
+  border-bottom: 6px solid transparent;
+  transition: all 0.4s;
 }
 .section-underline {
   border-bottom: 6px solid #00FFE9;

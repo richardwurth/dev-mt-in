@@ -64,7 +64,7 @@ angular.module('central').controller('mainController', function($scope, mainServ
   }
   $scope.underline = function () {
     if (updateVis === true) {
-      $('#updateLink').addClass('section-underline');
+        $('#updateLink').addClass('section-underline');
       $('#findLink').removeClass('section-underline');
       $('#friendsLink').removeClass('section-underline');
     }  else if (friendsVis === true) {
