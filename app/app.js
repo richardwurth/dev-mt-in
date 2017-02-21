@@ -1,1 +1,1 @@
-angular.module('central',[])
+angular.module('central',['ngAnimate'])
