@@ -1,5 +1,6 @@
 angular.module('central').controller('mainController', function($scope, mainService, $timeout){
-  $scope.underline = function (){
-    $('#friendsLink').addClass('section-underline');
-  }
+  $scope.underline = function ($event){
+    $('.foot-link').removeClass('section-underline');
+    $($event.target).addClass('section-underline');
+  };
 });

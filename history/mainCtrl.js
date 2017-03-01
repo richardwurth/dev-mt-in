@@ -15,7 +15,7 @@ angular.module('central').controller('mainController', function($scope, mainServ
     $('.update-main').fadeOut(500);
     $('#friendsParent').fadeOut(500);
     $('#findFriendsParent').fadeOut(500);
-  }
+  };
   $scope.custFadeOut = function (){
     if (vis === true) {
       $('.main-content').fadeOut(500);
@@ -24,7 +24,7 @@ angular.module('central').controller('mainController', function($scope, mainServ
       //   $('.main-content').fadeIn();
       //   vis = true;
     }
-  }
+  };
   $scope.friendsFadeIn = function (){
     if (friendsVis === false) {
       friendsVis = true;
@@ -36,7 +36,7 @@ angular.module('central').controller('mainController', function($scope, mainServ
       $('.update-main').fadeOut(500);
       $('#findFriendsParent').fadeOut(500);
     }
-  }
+  };
 
   $scope.updateFadeIn = function (){
     if (updateVis === false) {
@@ -49,7 +49,7 @@ angular.module('central').controller('mainController', function($scope, mainServ
       $('#friendsParent').fadeOut(500);
       $('#findFriendsParent').fadeOut(500);
     }
-  }
+  };
   $scope.findFriendsFadeIn = function (){
     if (findVis === false) {
       findVis = true;
@@ -61,7 +61,7 @@ angular.module('central').controller('mainController', function($scope, mainServ
       $('#friendsParent').fadeOut(500);
       $('.update-main').fadeOut(500);
     }
-  }
+  };
   $scope.underline = function () {
     if (updateVis === true) {
         $('#updateLink').addClass('section-underline');
@@ -80,5 +80,5 @@ angular.module('central').controller('mainController', function($scope, mainServ
       $('#friendsLink').removeClass('section-underline');
       $('#updateLink').removeClass('section-underline');
     }
-  }
+  };
 });

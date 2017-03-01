@@ -1,18 +1,17 @@
-
-var routerApp = angular.module('routerApp',['ui.router']);
+var routerApp = angular.module('central',['ui.router']);
 routerApp.config(function($stateProvider, $urlRouterProvider) {
 
 
-  $urlRouterProvider.otherwise('/');
   $stateProvider
 
 
     .state('home', {
+      name: 'home',
       url: '/home',
       templateUrl: 'about_me.html'
 
 
 
     });
+      $urlRouterProvider.otherwise('/');
 });
-angular.module('central',['ngAnimate','routerApp']);
